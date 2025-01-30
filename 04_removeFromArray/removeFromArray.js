@@ -1,15 +1,7 @@
 const removeFromArray = function(originalArray, ...extraItems) {
-    let newArray = originalArray.filter(removeItem)
-
-    function removeItem(item) {
-        if (!(extraItems.includes(item))) {
-            return item
-        }
-    }
-
-    return newArray
+    return originalArray.filter((item) => !(extraItems.includes(item)))
 };
 
-removeFromArray([1,3,3,4, 5, 6],3, 4, 5)
+console.log(removeFromArray([1,3,3,4, 5, 6],3, 5))
 // Do not edit below this line
 module.exports = removeFromArray;
